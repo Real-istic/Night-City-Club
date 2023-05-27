@@ -1,0 +1,100 @@
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/assets/backgrounds/Atlantica Background.jpg');
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+
+  .start-screen-overlay {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    background: url('/assets/backgrounds/overlay background.png');
+    background-size: cover;
+    border-radius: 20px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 5px rgb(255, 255, 255), inset 0 0 10px 5px rgb(255, 255, 255);
+    background-blend-mode: darken;
+    background-color: rgba(19, 12, 12, 0.5);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-blend-mode: darken;
+      background-color: rgba(19, 12, 12, 0);
+      transition: all 0.2s ease-in-out;
+    }
+
+    span {
+      font-size: 50px;
+      font-weight: bold;
+      font-family: 'Tilt Neon', cursive;
+      animation: flicker 2s infinite;
+      color: #ffff00;
+      text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+    }
+
+    .play-button {
+      animation: none;
+      border: 5px solid rgba(255, 255, 0, 0);
+      border-radius: 10px;
+      padding: 7px 25px;
+      background: url('/assets/backgrounds/button.jpg');
+      background-size: cover;
+      box-shadow: 5px 5px 15px 10px rgb(1, 1, 0);
+      color: #ffff00;
+      transition: all 0.2s ease-in-out;
+      text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 45px #FFFF00, 0 0 55px #FFFF00;
+
+      &:hover {
+        cursor: pointer;
+        border: 5px solid rgb(255, 255, 0);
+        color: #ffff00;
+        box-shadow: 0 0 8px 3px rgb(242, 255, 0), inset 0 0 8px 3px rgb(242, 255, 0);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes flicker {
+  0% {
+    color: #ffff00;
+    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+  }
+
+  5% {
+    color: #ffff00;
+    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+  }
+
+  10% {
+    text-shadow: 0 0 10px rgba(255, 247, 2, 0.568);
+    color: rgb(158, 158, 99);
+  }
+
+  15% {
+    color: #ffff00;
+    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+  }
+
+  20% {
+    text-shadow: 0 0 10px rgba(255, 247, 2, 0.568);
+    color: rgb(154, 154, 97);
+  }
+
+  35% {
+    color: #ffff00;
+    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+  }
+
+  100% {
+    color: #ffff00;
+    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+  }
+}
