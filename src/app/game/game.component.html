@@ -1,0 +1,13 @@
+<div class="field">
+  <div class="card-stack">
+    <!-- card stack -->
+    <img [ngStyle]="{'right.px': i  * 10}" *ngFor="let c of [0, 1, 2, 3]; let i = index;" class="card-cover" src="/assets/cards/Back of Atlantica.png" alt="">
+    <img (click)="takeCard()" [class.pick-card]="pickCardAnimation" class="top-card card-cover" [ngStyle]="{'right.px': 40}" src="/assets/cards/Back of Atlantica.png" alt="">
+
+    <!-- stack for played cards -->
+    <img (click)="takeCard()" *ngIf="pickCardAnimation" [class.pick-card]="pickCardAnimation" class="top-card card-cover pick-card" [ngStyle]="{'right.px': 40}" src="/assets/cards/{{ currentCard }}.png" alt="">
+
+    <!-- current card animation -->
+    <img class="card-cover played-card" *ngFor="let card of game.playedCards" src="/assets/cards/{{ card }}.png" alt="">
+  </div>
+</div>

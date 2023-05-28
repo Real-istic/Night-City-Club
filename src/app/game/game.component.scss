@@ -1,0 +1,67 @@
+.field {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-image: url('/assets/backgrounds/Atlantica Table.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card-stack {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    top: 200px;
+    left: 400px;
+
+    .card-cover {
+      position: absolute;
+      width: 240px;
+      height: 350px;
+      box-shadow: 3px 3px 8px 3px #000000;
+      border-radius: 15px;
+    }
+  }
+}
+
+.top-card {
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2) translateY(-50px) translateX(-35px);
+    transition: all 0.15s ease-in-out;
+  }
+}
+
+.pick-card {
+  transition: all 0.15s ease-in-out;
+  transform: scale(1.0) translateX(-35px) translateY(-50px);
+  animation: pick-card-animation 1.6s ease-in-out;
+}
+
+.played-card {
+  transform: scale(1.1) translateX(-485px) translateY(-250px) rotate(-10deg);
+  transition: all 0.25s ease-in-out;
+  animation: pick-card-animation 1.6s ease-in-out;
+
+}
+
+@keyframes pick-card-animation {
+  0% {
+    transform: scale(1) translateX(-35px) translateY(-50px);
+  }
+  30% {
+    transform: scale(1.2) translateX(-235px) translateY(-150px);
+  }
+  80% {
+    transform: scale(1.2) translateX(-235px) translateY(-150px);
+  }
+  100% {
+    transform: scale(1.1) translateX(-485px) translateY(-250px) rotate(-10deg);
+  }
+}
