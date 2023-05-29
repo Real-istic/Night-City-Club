@@ -1,0 +1,47 @@
+.player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: url('/assets/backgrounds/button.jpg');
+  background-size: 100% 300%;
+  border-bottom: 5px solid yellow;
+  box-shadow: 0 0 8px 3px rgb(242, 255, 0), inset 0 0 8px 3px rgb(242, 255, 0);
+  height: 130px;
+
+  span {
+    font-size: 30px;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: bold;
+    color: yellow;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+  }
+
+  img {
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    filter: brightness(2);
+    animation: flicker 1s infinite;
+  box-shadow: 0 0 5px 2px rgb(215, 5, 247);
+
+
+  }
+}
+
+@keyframes flicker {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+
+
+}
