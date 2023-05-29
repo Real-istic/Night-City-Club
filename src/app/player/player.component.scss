@@ -5,17 +5,17 @@
   gap: 20px;
   background: url('/assets/backgrounds/button.jpg');
   background-size: 100% 300%;
-  border-bottom: 5px solid yellow;
-  box-shadow: 0 0 8px 3px rgb(242, 255, 0), inset 0 0 8px 3px rgb(242, 255, 0);
+  border-bottom: 5px solid rgb(255, 0, 242);
+  box-shadow: 0 0 8px 3px rgb(234, 0, 255), inset 0 0 8px 3px rgb(251, 0, 255);
   height: 130px;
 
   span {
     font-size: 30px;
     font-family: 'Tilt Neon', cursive;
     font-weight: bold;
-    color: yellow;
+    color: rgb(251, 0, 255);
     letter-spacing: 5px;
-    text-shadow: 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 35px #FFFF00, 0 0 55px #FFFF00;
+    text-shadow: 0 0 20px #e100ff, 0 0 30px #e100ff, 0 0 35px #f700ff, 0 0 55px #ff00f7;
   }
 
   img {
@@ -23,7 +23,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(221, 4, 250);
     filter: brightness(2);
     animation: flicker 1s infinite;
   box-shadow: 0 0 5px 2px rgb(215, 5, 247);
