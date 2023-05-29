@@ -1,0 +1,22 @@
+.mat-mdc-card {
+  background: url('/assets/backgrounds/button.jpg');
+  background-size: cover;
+  font-size: 20px;
+  padding: 15px 10px 0 15px;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.487);
+}
+
+.mat-mdc-card-title {
+  font-family: 'Tilt Neon', cursive;
+  font-size: 24px;
+  color: rgb(251, 0, 255);
+  text-shadow: 0 0 20px #e100ff, 0 0 30px #e100ff, 0 0 35px #f700ff, 0 0 55px #ff00f7;
+  margin-bottom: 5px;
+}
+
+.mat-mdc-card-content:last-child {
+  font-family: 'Tilt Neon', cursive;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px #fefefe, 0 0 30px #ffffff, 0 0 35px #ffffff, 0 0 55px #ffffff;
+}

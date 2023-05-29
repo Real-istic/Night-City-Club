@@ -17,13 +17,13 @@
     align-items: center;
     width: 300px;
     height: 400px;
-    bottom: 50px;
-    right: 100px;
+    bottom: 160px;
+    right: 50px;
 
     .card-cover {
       position: absolute;
-      width: 240px;
-      height: 350px;
+      width: 200px;
+      height: 300px;
       box-shadow: 3px 3px 8px 3px #000000;
       border-radius: 15px;
     }
@@ -46,7 +46,7 @@
 }
 
 .played-card {
-  transform: scale(1.1) translateX(-485px) translateY(-250px) rotate(-10deg);
+  transform: scale(1.1) translateX(-200px) translateY(-270px) rotate(-10deg);
   transition: all 0.25s ease-in-out;
   animation: pick-card-animation 1.6s ease-in-out;
 }
@@ -69,20 +69,27 @@
 
 }
 
+.pin-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  right: 100px;
+}
+
 @keyframes pick-card-animation {
   0% {
     transform: scale(1) translateX(-35px) translateY(-50px);
   }
 
   30% {
-    transform: scale(1.2) translateX(-235px) translateY(-150px);
+    transform: scale(1.2) translateX(-135px) translateY(-150px);
   }
 
   80% {
-    transform: scale(1.2) translateX(-235px) translateY(-150px);
+    transform: scale(1.2) translateX(-135px) translateY(-150px);
   }
 
   100% {
-    transform: scale(1.1) translateX(-485px) translateY(-250px) rotate(-10deg);
+    transform: scale(1.1) translateX(-200px) translateY(-270px) rotate(-10deg);
   }
 }
