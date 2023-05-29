@@ -1,6 +1,8 @@
 .field {
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
   max-width: 100%;
   background-image: url('/assets/backgrounds/Atlantica Table.jpg');
   background-size: cover;
@@ -9,14 +11,14 @@
   align-items: center;
 
   .card-stack {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
     height: 400px;
-    top: 200px;
-    left: 400px;
+    bottom: 50px;
+    right: 100px;
 
     .card-cover {
       position: absolute;
@@ -40,7 +42,6 @@
 
 .pick-card {
   transition: all 0.15s ease-in-out;
-  transform: scale(1.0) translateX(-35px) translateY(-50px);
   animation: pick-card-animation 1.6s ease-in-out;
 }
 
@@ -48,6 +49,23 @@
   transform: scale(1.1) translateX(-485px) translateY(-250px) rotate(-10deg);
   transition: all 0.25s ease-in-out;
   animation: pick-card-animation 1.6s ease-in-out;
+}
+
+.button-add {
+  box-shadow: 0 0 4px 1px rgb(234, 0, 255), inset 0 0 4px 1px rgb(251, 0, 255);
+  transition: all 0.1s ease-in-out;
+  color: rgb(234, 0, 255);
+  position: absolute;
+  left: 330px;
+  top: 20px;
+
+  &:hover {
+    background: rgb(234, 0, 255);
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 0 6px 3px rgb(234, 0, 255), inset 0 0 6px 3px rgb(251, 0, 255);
+    text-shadow: 0 0 8px #00308f;
+    color: #00308f;
+  }
 
 }
 
@@ -55,12 +73,15 @@
   0% {
     transform: scale(1) translateX(-35px) translateY(-50px);
   }
+
   30% {
     transform: scale(1.2) translateX(-235px) translateY(-150px);
   }
+
   80% {
     transform: scale(1.2) translateX(-235px) translateY(-150px);
   }
+
   100% {
     transform: scale(1.1) translateX(-485px) translateY(-250px) rotate(-10deg);
   }
