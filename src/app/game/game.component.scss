@@ -18,7 +18,7 @@
     width: 300px;
     height: 400px;
     bottom: 160px;
-    right: 50px;
+    right: 30%;
 
     .card-cover {
       position: absolute;
@@ -46,7 +46,7 @@
 }
 
 .played-card {
-  transform: scale(1.1) translateX(-200px) translateY(-270px) rotate(-10deg);
+  transform: scale(1.1) translateX(-400px) translateY(-270px) rotate(-10deg);
   transition: all 0.25s ease-in-out;
   animation: pick-card-animation 1.6s ease-in-out;
 }
@@ -66,14 +66,22 @@
     text-shadow: 0 0 8px #00308f;
     color: #00308f;
   }
-
 }
 
 .pin-bottom {
+  box-shadow: 0 0 8px 4px rgb(234, 0, 255), inset 0 0 8px 4px rgb(251, 0, 255);
+  border: 3px outset rgb(234, 0, 255);
+  border-radius: 20px;
   position: absolute;
   bottom: 20px;
   left: 100px;
   right: 100px;
+  background: url('/assets/backgrounds/button.jpg');
+  background-size: cover;
+  font-size: 20px;
+  padding: 15px 10px 0 15px;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.487);
 }
 
 @keyframes pick-card-animation {
@@ -82,14 +90,14 @@
   }
 
   30% {
-    transform: scale(1.2) translateX(-135px) translateY(-150px);
+    transform: scale(1.2) translateX(-235px) translateY(-150px);
   }
 
-  80% {
-    transform: scale(1.2) translateX(-135px) translateY(-150px);
+  70% {
+    transform: scale(1.2) translateX(-235px) translateY(-150px);
   }
 
   100% {
-    transform: scale(1.1) translateX(-200px) translateY(-270px) rotate(-10deg);
+    transform: scale(1.1) translateX(-400px) translateY(-270px) rotate(-10deg);
   }
 }
