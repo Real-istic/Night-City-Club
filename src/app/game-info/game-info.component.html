@@ -1,7 +1,5 @@
 <mat-card>
-  <mat-card-title>Titel</mat-card-title>
+  <mat-card-title>{{ card ? title : 'Pls pick a Card' }}</mat-card-title>
 
-  <mat-card-content>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. At temporibus consectetur deleniti ut dolorum, quidem quis quo doloribus voluptatibus dolores suscipit rerum dolore! Laboriosam dolores alias modi voluptate, commodi culpa.
-  </mat-card-content>
+  <mat-card-content>{{ card? description : 'Pls pick a Card from the Card Stack to select the next Card' }}</mat-card-content>
 </mat-card>

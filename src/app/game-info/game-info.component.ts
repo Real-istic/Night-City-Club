@@ -37,7 +37,11 @@ export class GameInfoComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log('current card: ', this.card);
-
+    if (this.card) {
+      console.log('current card: ', this.card);
+      let cardNumber = +this.card.split(' ')[0];
+      this.title = this.cardAction[cardNumber - 1].title;
+      this.description = this.cardAction[cardNumber - 1].description;
+    }
   }
 }
