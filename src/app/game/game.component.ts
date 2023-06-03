@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { AngularFireModule } from '@angular/fire/compat';
 
 
 @Component({
@@ -13,7 +14,9 @@ export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string | any = '';
   game = new Game;
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+    
+  }
 
   ngOnInit(): void {
     this.newGame();
