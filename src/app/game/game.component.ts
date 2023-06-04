@@ -18,38 +18,28 @@ import { ActivatedRoute } from '@angular/router';
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string | any = '';
-  game = new Game;
-  games$: Observable<any[]>;
-  games: Array<any> = [];
+  game: Game = new Game();
   firestore: Firestore = inject(Firestore);
+  id = '';
 
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute) {
-    const gameCollection = collection(this.firestore, 'games');
-    this.games$ = collectionData(gameCollection);
 
-    this.games$.subscribe((newGame) => {
-      // console.log('Game update: ', newGame);
-      this.games = newGame;
-    });
   }
 
   ngOnInit(): void {
     this.newGame();
-    this.route.params.subscribe(async (params) => {
-      console.log('Params: ', params);
-    });
-    // console.log(this.game);
   }
 
   async newGame() {
-    // this.router.navigateByUrl('/game/');
-    // this.game = new Game();
-    // console.log(this.game);
+    this.game = new Game();
+    console.log(this.game);
     const gameCollection = collection(this.firestore, 'games');
     let gameInfo = await addDoc(gameCollection, this.game.toJson());
-    console.log('Game info: ', gameInfo);
-
+    console.log('Game info: ', gameInfo.id);
+    this.route.params.subscribe(async (params) => {
+      console.log('Params: ', params);
+    });
   }
 
   takeCard() {
