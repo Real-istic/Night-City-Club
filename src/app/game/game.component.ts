@@ -36,7 +36,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.newGame();
-    this.route.params.subscribe((params) => {
+    this.route.params.subscribe(async (params) => {
       console.log('Params: ', params);
     });
     // console.log(this.game);
