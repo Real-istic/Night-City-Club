@@ -32,10 +32,13 @@ export class GameComponent implements OnInit {
 
   async newGame() {
     this.game = new Game();
-    console.log(this.game);
     const gameCollection = collection(this.firestore, 'games');
     let gameInfo = await addDoc(gameCollection, this.game.toJson());
+
+    console.log(this.game);
     console.log('Game info: ', gameInfo.id);
+    console.log(this.game.toJson())
+
     this.route.params.subscribe(async (params) => {
       console.log('Params: ', params);
     });
