@@ -4,10 +4,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { Firestore, collectionData, collection, setDoc, doc, addDoc } from '@angular/fire/firestore';
+import { Firestore, collectionData, setDoc, docData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-
+import { collection, doc, addDoc, getFirestore, getDoc } from "firebase/firestore";
 
 
 @Component({
@@ -20,6 +20,8 @@ export class GameComponent implements OnInit {
   currentCard: string | any = '';
   game: Game = new Game();
   firestore: Firestore = inject(Firestore);
+  game$: Observable<any> | any;
+  gameID: string | any = '';
 
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute) {
@@ -28,20 +30,35 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.newGame();
+    this.route.params.subscribe(async (params) => {
+      console.log('Params-id: ', params['id']);
+      this.gameID = params['id'];
+      const gameCollection = collection(this.firestore, 'games');
+
+      this.game$ = doc(gameCollection, this.gameID);
+      docData(this.game$).subscribe((myGames: any) => {
+        console.log('myGames: ', myGames);
+
+        console.log('Document reference: ', this.game$);
+        // let specificGame = doc(collection(this.firestore, 'games'), 'games', params['id']);
+        // console.log('Specific game: ', specificGame);
+      });
+
+    });
+
+
   }
 
   async newGame() {
-    this.game = new Game();
-    const gameCollection = collection(this.firestore, 'games');
-    let gameInfo = await addDoc(gameCollection, this.game.toJson());
+    // this.game = new Game();
 
-    console.log(this.game);
-    console.log('Game info: ', gameInfo.id);
-    console.log(this.game.toJson())
 
-    this.route.params.subscribe(async (params) => {
-      console.log('Params: ', params);
-    });
+    // let gameInfo = await addDoc(gameCollection, this.game.toJson());
+    // console.log('Game collection: ', gameCollection);
+    // console.log('Game info: ', gameInfo.id);
+    // console.log(this.game.toJson())
+
+
   }
 
   takeCard() {
