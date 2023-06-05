@@ -20,7 +20,6 @@ export class GameComponent implements OnInit {
   currentCard: string | any = '';
   game: Game = new Game();
   firestore: Firestore = inject(Firestore);
-  id = '';
 
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute) {
