@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "night-city-87573": {
-      "hosting": {
-        "nightcity": [
-          "night-city-87573"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "night-city-87573"
   }

@@ -29,13 +29,13 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     this.newGame();
     this.route.params.subscribe(async (params: any) => {
-      console.log('Params-id: ', params.id);
+      // console.log('Params-id: ', params.id);
       this.gameID = params.id;
       const gameCollection = collection(this.firestore, 'games');
       this.game$ = doc(gameCollection, this.gameID);
 
       docData(this.game$).subscribe((myGame: any) => {
-        console.log('myGame: ', myGame);
+        // console.log('myGame: ', myGame);
         this.game.currentPlayer = myGame.currentPlayer;
         this.game.playedCards = myGame.playedCards;
         this.game.players = myGame.players;
@@ -83,7 +83,7 @@ export class GameComponent implements OnInit {
     const gameCollection = collection(this.firestore, 'games');
     this.game$ = doc(gameCollection, this.gameID);
     const pushSaveGame = await updateDoc(this.game$, this.game.toJson());
-    console.log('pushSaveGame: ', pushSaveGame);
+    // console.log('pushSaveGame: ', pushSaveGame);
   }
 
 
