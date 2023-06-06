@@ -6,12 +6,12 @@
     <!-- card stack -->
     <img [ngStyle]="{'right.px': i  * 10}" *ngFor="let c of [0, 1, 2, 3]; let i = index;" class="card-cover"
       src="/assets/cards/Back of Night City.png" alt="">
-    <img (click)="takeCard()" [class.pick-card]="pickCardAnimation" class="top-card card-cover"
+    <img (click)="takeCard()" [class.pick-card]="game.pickCardAnimation" class="top-card card-cover"
       [ngStyle]="{'right.px': 40}" src="/assets/cards/Back of Night City.png" alt="">
 
     <!-- stack for played cards -->
-    <img (click)="takeCard()" *ngIf="pickCardAnimation" [class.pick-card]="pickCardAnimation"
-      class="top-card card-cover pick-card" [ngStyle]="{'right.px': 40}" src="/assets/cards/{{ currentCard }}.png"
+    <img (click)="takeCard()" *ngIf="game.pickCardAnimation" [class.pick-card]="game.pickCardAnimation"
+      class="top-card card-cover pick-card" [ngStyle]="{'right.px': 40}" src="/assets/cards/{{ game.currentCard }}.png"
       alt="">
 
     <!-- current card animation -->
@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<app-game-info [card]="currentCard" class="pin-bottom"></app-game-info>
+<app-game-info [card]="game.currentCard" class="pin-bottom"></app-game-info>
 
 
 <button (click)="openDialog()" class="button-add" mat-fab color="primary">

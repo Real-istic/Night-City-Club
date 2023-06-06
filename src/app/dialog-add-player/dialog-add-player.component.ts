@@ -8,7 +8,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class DialogAddPlayerComponent implements OnInit {
 
-  name: string | any = '';
+  name: string = '';
 
   constructor(public dialogRef: MatDialogRef<DialogAddPlayerComponent>) {
 
