@@ -15,6 +15,15 @@
   width: auto;
   background-blend-mode: darken;
 
+  @media (max-width: 600px) {
+    min-width: unset;
+    max-width: unset;
+    left: 5px;
+    height: 60px;
+    width: 170px;
+    gap: 0px;
+  }
+
   span {
     margin: 0 20px;
     font-size: 30px;
@@ -23,6 +32,11 @@
     color: rgb(251, 0, 255);
     letter-spacing: 5px;
     text-shadow: 0 0 20px #e100ff, 0 0 30px #e100ff, 0 0 35px #f700ff, 0 0 55px #ff00f7;
+
+    @media (max-width: 600px) {
+      font-size: 15px;
+      margin: 0 10px;
+    }
   }
 
   img {
@@ -33,6 +47,12 @@
     border: 2px solid rgb(221, 4, 250);
     box-shadow: 0 0 8px 3px rgb(234, 0, 255), inset 0 0 8px 3px rgb(251, 0, 255);
     filter: brightness(0.5);
+
+    @media (max-width: 600px) {
+      width: 50px;
+      height: 50px;
+      margin-left: 5px;
+    }
   }
 }
 
