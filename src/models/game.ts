@@ -5,10 +5,12 @@ export class Game {
   public currentPlayer: number = 0;
   public pickCardAnimation = false;
   public currentCard: string | any = '';
+  public newStack: string[] = [];
 
   constructor() {
     for (let i = 1; i < 14; i++) {
       this.stack.push(i + ' of Night City');
+      this.newStack.push(i + ' of Night City');
     }
     this.shuffle(this.stack);
   }

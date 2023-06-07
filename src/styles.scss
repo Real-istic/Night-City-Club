@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -10,5 +10,70 @@ body {
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.mat-mdc-dialog-container {
+  box-shadow: 0 0 20px 10px rgb(234, 0, 255);
+  border: 2px outset rgb(234, 0, 255);
+  border-radius: 5px;
+  background-blend-mode: darken;
+  background: linear-gradient(45deg, #8e008e 0%, #000000 50%, #990194 100%);
+}
+
+.mat-mdc-dialog-title {
+  font-family: 'Tilt Neon', cursive!important;
+  font-weight: bold!important;
+  color: rgb(251, 0, 255)!important;
+  text-shadow: 0 0 20px #e100ff, 0 0 30px #e100ff, 0 0 35px #f700ff, 0 0 55px #ff00f7!important;
+  animation: flicker 2s infinite;
+}
+
+.mat-mdc-dialog-content {
+  color: rgb(255, 255, 255)!important;
+  font-family: 'Tilt Neon', cursive!important;
+  font-weight: bold!important;
+}
+
+.mat-mdc-dialog-surface {
+  border: 2px outset rgb(234, 0, 255);
+  background-blend-mode: darken;
+  background: linear-gradient(45deg, #8e008e 0%, #000000 50%, #990194 100%);
+}
+
+.mdc-text-field {
+  background: linear-gradient(45deg, #ffc4ff 0%, #c36eff 50%, #ff7cfb 100%);
+}
+
+button span {
+  color: rgb(255, 255, 255)!important;
+  font-family: 'Tilt Neon', cursive!important;
+  font-weight: bold!important;
+}
+
+input {
+  color: rgb(0, 0, 0)!important;
+  font-weight: bold!important;
+}
+
+@keyframes flicker {
+  0% {
+    filter: brightness(0.7);
+  }
+
+  66% {
+    filter: brightness(1);
+  }
+
+  100% {
+    filter: brightness(0.7);
+  }
+}

@@ -40,18 +40,20 @@
       height: 300px;
       box-shadow: 3px 3px 8px 3px #000000;
       border-radius: 15px;
-      margin-left: 20px;
+      margin-left: 25px;
 
 
       @media (max-width: 900px) {
         width: 170px;
         height: 250px;
+        margin-left: 45px;
+
       }
 
       @media (max-width: 600px) {
         width: 120px;
         height: 170px;
-        margin-left: 50px;
+        margin-left: 95px;
         box-shadow: 3px 3px 3px 0px #000000;
       }
     }
@@ -65,23 +67,24 @@
   &:hover {
     transform: scale(1.2) translateY(-50px) translateX(-35px);
     transition: all 0.15s ease-in-out;
+    z-index: 1;
   }
 }
 
 .pick-card {
   transition: all 0.15s ease-in-out;
-  animation: pick-card-animation 1.6s ease-in-out;
+  animation: pick-card-animation 1.4s ease-in-out;
 
   @media (min-width: 1300px) {
-    animation: pick-card-animation 1.6s ease-in-out;
+    animation: pick-card-animation 1.4s ease-in-out;
   }
 
   @media (max-width: 1300px) {
-    animation: pick-card-animation-1300px 1.6s ease-in-out;
+    animation: pick-card-animation-1300px 1.4s ease-in-out;
   }
 
   @media (max-width: 900px) {
-    animation: pick-card-animation-900px 1.6s ease-in-out;
+    animation: pick-card-animation-900px 1.4s ease-in-out;
   }
 }
 
@@ -90,17 +93,17 @@
   transition: all 0.25s ease-in-out;
 
   @media (min-width: 1300px) {
-    animation: pick-card-animation 1.6s ease-in-out;
+    animation: pick-card-animation 1.4s ease-in-out;
   }
 
   @media (max-width: 1300px) {
     transform: scale(1.1) translateX(-200px) translateY(-310px) rotate(-10deg);
-    animation: pick-card-animation-1300px 1.6s ease-in-out;
+    animation: pick-card-animation-1300px 1.4s ease-in-out;
   }
 
   @media (max-width: 900px) {
-    transform: scale(1.1) translateX(40px) translateY(-260px) rotate(-5deg);
-    animation: pick-card-animation-900px 1.6s ease-in-out;
+    transform: scale(1.1) translateX(30px) translateY(-260px) rotate(-5deg);
+    animation: pick-card-animation-900px 1.4s ease-in-out;
   }
 }
 
@@ -135,8 +138,8 @@
     background: rgb(234, 0, 255);
     transition: all 0.1s ease-in-out;
     box-shadow: 0 0 6px 3px rgb(234, 0, 255), inset 0 0 6px 3px rgb(251, 0, 255);
-    text-shadow: 0 0 8px #00308f;
-    color: #00308f;
+    text-shadow: 0 0 8px #ffffff;
+    color: #ffffff;
   }
 }
 
@@ -201,7 +204,7 @@
 
 @keyframes pick-card-animation-900px {
   0% {
-    transform: scale(1) translateX(5px) translateY(-50px);
+    transform: scale(1) translateX(-35px) translateY(-50px);
   }
 
   30% {
@@ -213,6 +216,6 @@
   }
 
   100% {
-    transform: scale(1.1) translateX(40px) translateY(-260px) rotate(-5deg);
+    transform: scale(1.1) translateX(30px) translateY(-260px) rotate(-5deg);
   }
 }

@@ -33,7 +33,6 @@ export class GameInfoComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log('current card: ', this.card);
   }
 
   ngOnChanges(): void {
