@@ -67,43 +67,43 @@
   &:hover {
     transform: scale(1.2) translateY(-50px) translateX(-35px);
     transition: all 0.15s ease-in-out;
-    z-index: 1;
+    // z-index: 1;
+    @media (max-width: 600px) {
+      transform: scale(1.2) translateY(-30px) translateX(-15px);
+    }
   }
 }
 
 .pick-card {
   transition: all 0.15s ease-in-out;
-  animation: pick-card-animation 1.4s ease-in-out;
+  animation: pick-card-animation 1.5s ease-in-out;
 
   @media (min-width: 1300px) {
-    animation: pick-card-animation 1.4s ease-in-out;
+    animation: pick-card-animation 1.5s ease-in-out;
   }
 
   @media (max-width: 1300px) {
-    animation: pick-card-animation-1300px 1.4s ease-in-out;
+    animation: pick-card-animation-1300px 1.5s ease-in-out;
   }
 
   @media (max-width: 900px) {
-    animation: pick-card-animation-900px 1.4s ease-in-out;
+    animation: pick-card-animation-900px 1.5s ease-in-out;
   }
 }
 
 .played-card {
   transform: scale(1.1) translateX(-400px) translateY(-270px) rotate(-10deg);
   transition: all 0.25s ease-in-out;
-
-  @media (min-width: 1300px) {
-    animation: pick-card-animation 1.4s ease-in-out;
-  }
+  animation: pick-card-animation 1.5s ease-in-out;
 
   @media (max-width: 1300px) {
     transform: scale(1.1) translateX(-200px) translateY(-310px) rotate(-10deg);
-    animation: pick-card-animation-1300px 1.4s ease-in-out;
+    animation: pick-card-animation-1300px 1.5s ease-in-out;
   }
 
   @media (max-width: 900px) {
     transform: scale(1.1) translateX(30px) translateY(-260px) rotate(-5deg);
-    animation: pick-card-animation-900px 1.4s ease-in-out;
+    animation: pick-card-animation-900px 1.5s ease-in-out;
   }
 }
 
