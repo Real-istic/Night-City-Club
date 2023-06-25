@@ -30,17 +30,17 @@ body {
 }
 
 .mat-mdc-dialog-title {
-  font-family: 'Tilt Neon', cursive!important;
-  font-weight: bold!important;
-  color: rgb(251, 0, 255)!important;
-  text-shadow: 0 0 20px #e100ff, 0 0 30px #e100ff, 0 0 35px #f700ff, 0 0 55px #ff00f7!important;
+  font-family: 'Tilt Neon', cursive !important;
+  font-weight: bold !important;
+  color: rgb(251, 0, 255) !important;
+  text-shadow: 0 0 20px #e100ff, 0 0 30px #e100ff, 0 0 35px #f700ff, 0 0 55px #ff00f7 !important;
   animation: flicker 2s infinite;
 }
 
 .mat-mdc-dialog-content {
-  color: rgb(255, 255, 255)!important;
-  font-family: 'Tilt Neon', cursive!important;
-  font-weight: bold!important;
+  color: rgb(255, 255, 255) !important;
+  font-family: 'Tilt Neon', cursive !important;
+  font-weight: bold !important;
 }
 
 .mat-mdc-dialog-surface {
@@ -54,14 +54,14 @@ body {
 }
 
 button span {
-  color: rgb(255, 255, 255)!important;
-  font-family: 'Tilt Neon', cursive!important;
-  font-weight: bold!important;
+  color: rgb(255, 255, 255) !important;
+  font-family: 'Tilt Neon', cursive !important;
+  font-weight: bold !important;
 }
 
 input {
-  color: rgb(0, 0, 0)!important;
-  font-weight: bold!important;
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold !important;
 }
 
 @keyframes flicker {
@@ -76,4 +76,12 @@ input {
   100% {
     filter: brightness(0.7);
   }
+}
+
+@font-face {
+  font-family: 'Tilt Neon';
+  src: url('^assets/fonts/TiltNeon-Regular-VariableFont_XROT,YROT.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
