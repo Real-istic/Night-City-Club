@@ -45,6 +45,7 @@ export class GameComponent implements OnInit {
 
   async newGame() {
     this.game = new Game();
+    this.openDialog();
   }
 
   async takeCard() {
