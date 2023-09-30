@@ -39,7 +39,6 @@ export class GameComponent implements OnInit {
         this.game.pickCardAnimation = myGame.pickCardAnimation;
         this.game.currentCard = myGame.currentCard;
       });
-
     });
   }
 
